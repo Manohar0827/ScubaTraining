@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Calc Testing" parallel="methods" thread-count="2">
+<test name="Calc data">
+<parameter name="number1" value= "2"></parameter>
+<parameter name="number2" value="4"></parameter>
+
+
+<groups>
+	<run>
+	  
+		<include name="exp"></include>
+		<include name="sum"></include>
+		<exclude name="product"></exclude>
+		<include name="div"></include>
+		<include name="realdiv"></include>
+		
+	</run>
+</groups>
+	<classes>
+		<class name="com.calculator.CalculatorTest"></class>
+	</classes>
+</test>
+</suite>
